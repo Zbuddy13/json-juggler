@@ -8,8 +8,8 @@ app = Quart(__name__)
 
 data = {"nothing" : "sent"}
 
-@app.post("/recieve")
-async def recieve():
+@app.post("/receive")
+async def receive():
     global data
     try:
         data = await request.get_json()  # Attempt to parse JSON
